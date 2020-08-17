@@ -4,8 +4,11 @@
   "description": "Nodejs Typescript api",
   "main": "index.js",
   "scripts": {
-    "build" : "tsc",
-    "start" : "yarn build && node dist/src/index.js",
+    "build": "tsc",
+    "start": "yarn build && node dist/src/index.js",
+    "start:dev": "ts-node-dev src/index.ts",
+    "lint": "eslint ./src ./test --ext .ts",
+    "lint:fix": "eslint ./src ./test --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +29,10 @@
   "devDependencies": {
     "@types/module-alias": "^2.0.0",
     "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.7.0",
+    "ts-node-dev": "^1.0.0-pre.57",
     "typescript": "^3.9.7"
   },
   "dependencies": {
